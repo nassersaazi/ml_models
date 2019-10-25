@@ -7,6 +7,7 @@ import math
 import warnings
 warnings.filterwarnings('ignore')
 
+
 import pandas as pd
 import seaborn as sns
 from sklearn.model_selection import GridSearchCV,RandomizedSearchCV
@@ -25,7 +26,8 @@ class Preprocessor:
         pass
     
     def drop_cols(self,df,cols):
-        output = df.drop(cols)
+        df = df
+        output = df.drop(cols=cols,axis=1)
         return output
 
     def show_category(self,df,column,value):
