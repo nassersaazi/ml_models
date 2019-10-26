@@ -15,6 +15,7 @@ import numpy as np
 import datetime as dt
 from matplotlib import style
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import MinMaxScaler
 style.use('fivethirtyeight')
 
 
