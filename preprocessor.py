@@ -26,10 +26,13 @@ class Preprocessor:
     def __str__(self):
         pass
     
-    def drop_cols(self,df,cols):
-        df = df
-        output = df.drop(cols=cols,axis=1)
-        return output
+    def overview(self,df):
+        print(f'\nDataset contains {df.shape[0]} rows and {df.shape[1]} columns')
+        print(f'\nData types of the raw (uncleaned) data:\n{df.dtypes}')
+        cat,num = self.column_types(df)
+        print(f'\nCategorical features of the dataset: {cat}\n\nNumeric features of the dataset: {num}')
+        print(f'\nChecking for features with null values...\n\n{df.isnull().sum().sort_values(ascending=False)}' )
+       
 
     def show_category(self,df,column,value):
         """
