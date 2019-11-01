@@ -1,0 +1,4 @@
+-startproject
+-migrate
+-create super user
+-start app
