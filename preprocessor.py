@@ -20,20 +20,21 @@ style.use('fivethirtyeight')
 
 
 class Preprocessor:
-    def __int__(self):
-        pass
+    def __init__(self,df):
+        self.df = df
     
     def __str__(self):
         pass
     
-    def overview(self,df):
-        print(f'\nDataset contains {df.shape[0]} rows and {df.shape[1]} columns')
-        print(f'\nData types of the raw (uncleaned) data:\n{df.dtypes}')
-        cat,num = self.column_types(df)
-        print(f'\nCategorical features of the dataset: {cat}\n\nNumeric features of the dataset: {num}')
-        print(f'\nChecking for features with null values...\n\n{df.isnull().sum().sort_values(ascending=False)}' )
-       
 
+    def overview(self):
+        print(f'\nDataset contains {self.df.shape[0]} rows and {self.df.shape[1]} columns')
+        print(f'\nData types of the raw (uncleaned) data:\n{self.df.dtypes}')
+        cat,num = self.column_types(self.df)
+        print(f'\nCategorical features of the dataset: {cat}\n\nNumeric features of the dataset: {num}')
+        print(f'\nChecking for features with null values...\n\n{self.df.isnull().sum().sort_values(ascending=False)}' )
+    
+    
     def show_category(self,df,column,value):
         """
         display rows of a particular category
@@ -45,7 +46,8 @@ class Preprocessor:
         value_df = df.loc[df[column] == value]
         return value_df
 
-    def column_types(self,df):
+  
+    def column_types(self):
         """
         distinguish categorical and numerical columns
        :param df: pandas dataframe
@@ -54,8 +56,8 @@ class Preprocessor:
         cat_cols = []
         num_cols = []
         
-        for y in df.columns:
-            if (df[y].dtype == object):
+        for y in self.df.columns:
+            if (self.df[y].dtype == object):
                 cat_cols.append(y)
             else:
                 num_cols.append(y)
