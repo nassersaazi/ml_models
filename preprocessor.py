@@ -30,7 +30,7 @@ class Preprocessor:
     def overview(self):
         print(f'\nDataset contains {self.df.shape[0]} rows and {self.df.shape[1]} columns')
         print(f'\nData types of the raw (uncleaned) data:\n{self.df.dtypes}')
-        cat,num = self.column_types(self.df)
+        cat,num = self.column_types()
         print(f'\nCategorical features of the dataset: {cat}\n\nNumeric features of the dataset: {num}')
         print(f'\nChecking for features with null values...\n\n{self.df.isnull().sum().sort_values(ascending=False)}' )
     
