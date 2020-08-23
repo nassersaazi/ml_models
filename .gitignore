@@ -1,6 +1,7 @@
+
 *.vscode
 *.pyc
-**/__pycache
+**/__pycache__
 **/eliza-master
 *.csv
 *.xlsx
@@ -11,3 +12,4 @@
 *.csv#
 *.xlsx#
 *.png
+*twitter_credentials.json
