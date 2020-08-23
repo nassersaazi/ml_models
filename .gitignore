@@ -1,3 +1,7 @@
+*.vscode
+*.pyc
+**/__pycache
+**/eliza-master
 *.csv
 *.xlsx
 *.ipynb_checkpoints
