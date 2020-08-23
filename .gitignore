@@ -1,6 +1,6 @@
-
+*.gz
 *.vscode
-*.pyc
+*.cpython-36.pyc
 **/__pycache__
 **/eliza-master
 *.csv
