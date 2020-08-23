@@ -1,3 +1,9 @@
 *.csv
+*.xlsx
 *.ipynb_checkpoints
 **/titanic_kaggle
+*__pycache__
+*.pkl
+*.csv#
+*.xlsx#
+*.png
