@@ -1,0 +1,16 @@
+*.gz
+*.vscode
+*.cpython-36.pyc
+**/__pycache__
+**/eliza-master
+*.csv
+*.xlsx
+*.ipynb_checkpoints
+**/titanic_kaggle
+*__pycache__
+*.pkl
+*.csv#
+*.xlsx#
+*.png
+*jpg
+*twitter_credentials.json

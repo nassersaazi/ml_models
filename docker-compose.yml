@@ -1,0 +1,10 @@
+version: "3"
+services:
+    notebooks:
+      container_name: ml_models
+      image: jupyterworkimage:latest
+      volumes:
+          - C:\Users\nasser\Documents\personal\EndJahrProjekt\model:/src/notebooks
+      ports:
+        - "8888:8888"
+      
